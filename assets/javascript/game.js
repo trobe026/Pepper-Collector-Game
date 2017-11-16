@@ -11,15 +11,17 @@ $( window ).on( "load", function() {
         $('#random').html("Peppers Needed: " + randomNum + ".");
     });
 
+
+
 function bellpep() {
   console.log("test1");
   score = score + randomPepNum1;
   $('#score').html("Peppers Collected: " + score + ".");
   if (randomPepNum1 === 1) {
-    $('#pepNum1').html("<p>" + randomPepNum1 + " Bell Pepper</p>");
+    $('#pepNum1').html("<p>" + randomPepNum1 + " Bell Pepper</p>").show();
   }
   else {
-    $('#pepNum1').html("<p>" + randomPepNum1 + " Bell Peppers</p>");
+    $('#pepNum1').html("<p>" + randomPepNum1 + " Bell Peppers</p>").show();
   }
   console.log(score);
 }
@@ -29,10 +31,10 @@ function jalapeno() {
   score = score + randomPepNum2;
   $('#score').html("Peppers Collected: " + score + ".");
   if (randomPepNum2 === 1) {
-    $('#pepNum2').html("<p>" + randomPepNum2 + " Jalape&ntilde;o</p>");
+    $('#pepNum2').html("<p>" + randomPepNum2 + " Jalape&ntilde;o</p>").show();
   }
   else {
-    $('#pepNum2').html("<p>" + randomPepNum2 + " Jalape&ntilde;os</p>");
+    $('#pepNum2').html("<p>" + randomPepNum2 + " Jalape&ntilde;os</p>").show();
   }
   console.log(score);
 }
@@ -42,10 +44,10 @@ function serrano() {
   score = score + randomPepNum3;
   $('#score').html("Peppers Collected: " + score + ".");
   if (randomPepNum3 === 1) {
-    $('#pepNum3').html("<p>" + randomPepNum3 + " Serrano</p>");
+    $('#pepNum3').html("<p>" + randomPepNum3 + " Serrano</p>").show();
   }
   else {
-    $('#pepNum3').html("<p>" + randomPepNum3 + " Serranos</p>");
+    $('#pepNum3').html("<p>" + randomPepNum3 + " Serranos</p>").show();
   }
   console.log(score);
 }
