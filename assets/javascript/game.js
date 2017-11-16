@@ -1,49 +1,74 @@
 var randomNum = 19 + Math.floor(Math.random() * 101);
 var score = 0;
-var randomPepNum = '';
-
-
+var randomPepNum1 = 1 + Math.floor(Math.random() * 12);
+var randomPepNum2 = 1 + Math.floor(Math.random() * 12);
+var randomPepNum3 = 1 + Math.floor(Math.random() * 12);
+var randomPepNum4 = 1 + Math.floor(Math.random() * 12);
 
 $( window ).on( "load", function() {
         console.log( "window loaded" );
         $('#score').html("Peppers Collected: " + score + ".");
         $('#random').html("Peppers Needed: " + randomNum + ".");
-        $('img').html("randomPepNum");
     });
-
-for(i = 0;i < 4;i++) {
-
-}
 
 function bellpep() {
   console.log("test1");
-  randomPepNum = 1 + Math.floor(Math.random() * 12);
-  score = score + randomPepNum;
+  score = score + randomPepNum1;
   $('#score').html("Peppers Collected: " + score + ".");
-  $('#pepNum1').html("<p>" + randomPepNum + "</p>");
+  if (randomPepNum1 === 1) {
+    $('#pepNum1').html("<p>" + randomPepNum1 + " Bell Pepper</p>");
+  }
+  else {
+    $('#pepNum1').html("<p>" + randomPepNum1 + " Bell Peppers</p>");
+  }
   console.log(score);
 }
 
 function jalapeno() {
   console.log("test2");
-  score = score + randomPepNum;
+  score = score + randomPepNum2;
   $('#score').html("Peppers Collected: " + score + ".");
-  $('#pepNum2').text(randomPepNum);
+  if (randomPepNum2 === 1) {
+    $('#pepNum2').html("<p>" + randomPepNum2 + " Jalape&ntilde;o</p>");
+  }
+  else {
+    $('#pepNum2').html("<p>" + randomPepNum2 + " Jalape&ntilde;os</p>");
+  }
   console.log(score);
 }
 
 function serrano() {
   console.log("test3");
-  score = score + randomPepNum;
+  score = score + randomPepNum3;
   $('#score').html("Peppers Collected: " + score + ".");
-  $('#pepNum3').text(randomPepNum);
+  if (randomPepNum3 === 1) {
+    $('#pepNum3').html("<p>" + randomPepNum3 + " Serrano</p>");
+  }
+  else {
+    $('#pepNum3').html("<p>" + randomPepNum3 + " Serranos</p>");
+  }
   console.log(score);
 }
 
 function habanero() {
   console.log("test4");
-  score = score + randomPepNum;
+  score = score + randomPepNum4;
   $('#score').html("Peppers Collected: " + score + ".");
-  $('#pepNum4').text(randomPepNum);
+  if (randomPepNum4 === 1) {
+    $('#pepNum4').html("<p>" + randomPepNum4 + " Habanero</p>");
+  }
+  else {
+    $('#pepNum4').html("<p>" + randomPepNum4 + " Habaneros</p>");
+  }
   console.log(score);
+}
+
+function reset() {
+  console.log(score);
+  randomNum = 19 + Math.floor(Math.random() * 101);
+  score = 0
+  randomPepNum1 = 1 + Math.floor(Math.random() * 12);
+  randomPepNum2 = 1 + Math.floor(Math.random() * 12);
+  randomPepNum3 = 1 + Math.floor(Math.random() * 12);
+  randomPepNum4 = 1 + Math.floor(Math.random() * 12);
 }
