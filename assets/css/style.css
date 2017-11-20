@@ -23,7 +23,7 @@ header {
 
 h1 {
   color: cornflowerblue;
-  font-size: 3.75em;
+  font-size: 4em;
 }
 
 /*main section*/
@@ -51,6 +51,8 @@ article {
   width: 25%;
   text-align: center;
 }
+
+
 
 
 

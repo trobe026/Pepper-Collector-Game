@@ -11,7 +11,13 @@ $( window ).on( "load", function() {
         $('#random').html("Peppers Needed: " + randomNum + ".");
     });
 
+$('button').on("click", function () {
+  if (score == randomNum) {
+    console.log('test')
+    $('p').text("You Win!");
+  }
 
+});
 
 function bellpep() {
   console.log("test1");
