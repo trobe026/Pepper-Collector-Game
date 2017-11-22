@@ -1,7 +1,7 @@
 /*global*/
 
 body {
-  background-color: #007849;
+  background-color: #8FC33A;
   text-align: center;
   height: auto;
 }
@@ -11,7 +11,6 @@ body {
 }
 
 h2 {
-  float: left;
   font-size: 1.5em;
 }
 
@@ -19,6 +18,10 @@ h2 {
 h6 {
   margin-top: 40px;
   font-size: .75em;
+}
+
+p {
+  margin-bottom: 10px;
 }
 
 /*header*/
@@ -30,7 +33,7 @@ header {
 }
 
 h1 {
-  color: #0375B4;
+  color: #67AECA;
   font-size: 4em;
 }
 
@@ -40,41 +43,86 @@ h1 {
 
 /*main section*/
 
-
 section {
-  padding: 60px 0;
-  background-color: #0375B4;
+  padding: 40px 0;
+  background-color: #FECE00;
+  border-top: 2px solid #67AECA;
 }
 
 #score {
   max-width: 100%;
   padding: 60px 0;
-  background-color: #FECE00;
-
+  background-color: #67AECA;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
 }
 
 #random {
   max-width: 100%;
   padding: 60px 0;
-  background-color: #007849;
-
+  background-color: #8FC33A;
+  border-top: 2px solid #333;
 }
 
 .peppers {
   float: left;
   width: 25%;
-  padding-top: 20px;
-
+  margin-top: 40px;
 }
-
 
 /*footer*/
 
 footer {
   background-color: #262228;
-  color: cornflowerblue;
+  border-top: 2px solid #67AECA;
+  color: #67AECA;
   width: 100%;
   height: 100px;
   position: absolute;
   bottom: 0;
+}
+
+/* Float Shadow */
+
+button {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+button:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+button:hover {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+button:hover:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
 }

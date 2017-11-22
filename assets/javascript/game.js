@@ -7,22 +7,22 @@ var randomPepNum3 = 1 + Math.floor(Math.random() * 12);
 var randomPepNum4 = 1 + Math.floor(Math.random() * 12);
 // win || loss alerts and stored function
 var loss = ["Ew, that's terrible Salsa! You Lose!", "Gross Salsa! You Lose!", "Bah! Disgusting Salsa! You Lose!"];
-var win = ["That's some spicy salsa! You Win!", "Mmmmmmm! That's the Good Stuff! You Win!", "This is the World's Greatest Salsa! You Win!"]
+var win = ["That's some spicy salsa! You Win!", "Mmmmmmm! You Win!", "This is the World's Greatest Salsa! You Win!"]
 var randNum = Math.floor(Math.random() * loss.length);
 var randLoss = loss[randNum];
 var randWin = win[randNum];
 function ending() {
   if (score > randomNum) {
-    $('#score').html(randLoss);
+    $('#score').html("<h2>" + randLoss + "</h2>");
   }
   if (score === randomNum) {
-    $('#score').text(randWin);
+    $('#score').html("<h2>" + randWin + "</h2>");
   }
 }
 
 $( window ).on( "load", function() {
         $('#score').html("Peppers Collected: " + score + ".");
-        $('#random').html("Peppers Needed: " + randomNum + ".");
+        $('#random').html("Peppers Required: " + randomNum + ".");
 
         // click functions per pepper: Bell Pepper
 
@@ -90,7 +90,7 @@ $( window ).on( "load", function() {
           randomPepNum3 = 1 + Math.floor(Math.random() * 12);
           randomPepNum4 = 1 + Math.floor(Math.random() * 12);
           $('#score').html("Peppers Collected: " + score + ".");
-          $('#random').html("Peppers Needed: " + randomNum + ".");
+          $('#random').html("Peppers Required: " + randomNum + ".");
           $('#pepNum1,#pepNum2,#pepNum3,#pepNum4').hide();
         });
 
