@@ -1,19 +1,20 @@
 /*global*/
-
 body {
+  font-family: 'Dosis', sans-serif;
   background-color: #8FC33A;
   text-align: center;
-  height: auto;
+  height: 100%;
 }
 
-.container {
-  max-width: 100%;
+.container-full {
+  min-height: 100%;
+  padding-bottom:300px;
 }
 
 h2 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.5em;
 }
-
 
 h6 {
   margin-top: 40px;
@@ -33,6 +34,7 @@ header {
 }
 
 h1 {
+  font-family: 'Spectral SC', serif;
   color: #67AECA;
   font-size: 4em;
 }
@@ -44,9 +46,9 @@ h1 {
 /*main section*/
 
 section {
-  padding: 40px 0;
+  padding: 50px 0;
   background-color: #FECE00;
-  border-top: 2px solid #67AECA;
+  border-top: 2px solid #333;
 }
 
 #score {
@@ -74,11 +76,11 @@ section {
 
 footer {
   background-color: #262228;
-  border-top: 2px solid #67AECA;
+  border-top: 2px solid #333;
   color: #67AECA;
   width: 100%;
   height: 100px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 
@@ -97,6 +99,7 @@ button {
   -webkit-transition-property: transform;
   transition-property: transform;
 }
+
 button:before {
   pointer-events: none;
   position: absolute;
@@ -115,12 +118,14 @@ button:before {
   -webkit-transition-property: transform, opacity;
   transition-property: transform, opacity;
 }
-button:hover {
+
+button:hover, button:active {
   -webkit-transform: translateY(-5px);
   transform: translateY(-5px);
   /* move the element up by 5px */
 }
-button:hover:before {
+
+button:hover:before, button:active:before {
   opacity: 1;
   -webkit-transform: translateY(5px);
   transform: translateY(5px);
