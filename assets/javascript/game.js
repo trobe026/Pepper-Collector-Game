@@ -29,6 +29,7 @@ $( window ).on( "load", function() {
         $('#bellPep').on("click", function() {
           score = score + randomPepNum1;
           $('#score').html("<h2>Peppers Collected: " + score + ".</h2>");
+          $('#clear').hide();
           if (randomPepNum1 === 1) {
             $('#pepNum1').html("<p>" + randomPepNum1 + " Bell Pepper</p>").show();
           }
@@ -43,6 +44,7 @@ $( window ).on( "load", function() {
         $('#jalapeno').on("click", function() {
           score = score + randomPepNum2;
           $('#score').html("<h2>Peppers Collected: " + score + ".</h2>");
+          $('#clear').hide();
           if (randomPepNum2 === 1) {
             $('#pepNum2').html("<p>" + randomPepNum2 + " Jalape&ntilde;o</p>").show();
           }
@@ -57,6 +59,7 @@ $( window ).on( "load", function() {
         $('#serrano').on("click", function() {
           score = score + randomPepNum3;
           $('#score').html("<h2>Peppers Collected: " + score + ".</h2>");
+          $('#clear').hide();
           if (randomPepNum3 === 1) {
             $('#pepNum3').html("<p>" + randomPepNum3 + " Serrano</p>").show();
           }
@@ -71,6 +74,7 @@ $( window ).on( "load", function() {
         $('#habanero').on("click", function() {
           score = score + randomPepNum4;
           $('#score').html("<h2>Peppers Collected: " + score + ".</h2>");
+          $('#clear').hide();
           if (randomPepNum4 === 1) {
             $('#pepNum4').html("<p>" + randomPepNum4 + " Habanero</p>").show();
           }
@@ -92,6 +96,7 @@ $( window ).on( "load", function() {
           $('#score').html("<h2>Peppers Collected: " + score + ".</h2>");
           $('#random').html("<h2>Peppers Required: " + randomNum + ".</h2>");
           $('#pepNum1,#pepNum2,#pepNum3,#pepNum4').hide();
+          $('#clear').show();
         });
 
     });
